@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Speranța Trento</title>
+    <style>
+        body { display: flex; font-family: Arial, sans-serif; }
+        .sidebar {
+            position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+            background: #f0f0f0; padding: 10px; border-radius: 5px;
+        }
+        .sidebar a { display: block; margin: 5px 0; text-decoration: none; color: #007acc; }
+        .content { margin: 20px; padding-left: 80px; flex: 1; }
+        h2 { scroll-margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Cântece</h1>
+        <div id="output"></div>
+    </div>
+
+    <div class="sidebar" id="sidebar"></div>
+
+    <script>
+        fetch('cantari/data.json')
+        .then(response => response.json())
+        .then(items => {
+            // Sort and group items by first letter
+            items.sort((a, b) => a.title.localeCompare(b.title));
+            
+            const grouped = items.reduce((acc, item) => {
+                const letter = item.title[0];
+                if (!acc[letter]) acc[letter] = [];
+                acc[letter].push(item);
+                return acc;
+            }, {});
+
+            // Display grouped list
+            const output = document.getElementById('output');
+            const sidebar = document.getElementById('sidebar');
+            let letters = [];
+
+            for (const [letter, list] of Object.entries(grouped)) {
+                // Add section
+                output.innerHTML += `<h2 id="letter-${letter}">${letter}</h2>`;
+                const ul = document.createElement('ul');
+                list.forEach(i => {
+                    ul.innerHTML += `<li><a href="${i.link}" target="_self">${i.title}</a></li>`;
+                });
+                output.appendChild(ul);
+
+                // Add to sidebar
+                letters.push(`<a href="#letter-${letter}">${letter}</a>`);
+            }
+            sidebar.innerHTML = letters.join('');
+        });
+    </script>
+</body>
+
+</html>

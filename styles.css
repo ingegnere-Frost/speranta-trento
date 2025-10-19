@@ -1,0 +1,18 @@
+.verse {
+    line-height: 2;
+}
+.lyric {
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    line-height: 1;
+}
+.lyric[data-chord] {
+    --chord: attr(data-chord);
+}
+.lyric:before {
+    content: var(--chord, '\00a0');
+}
+.lyric.hide-chords::before {
+    display: none;
+}
