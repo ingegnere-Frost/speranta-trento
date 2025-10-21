@@ -7,62 +7,67 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <label for="showChords">Acorduri</label>
-  <input type="checkbox" id="showChords" checked>  
-  <br>
-  <label for="transposeSelect">Tonalitate: </label>
-  <select id="transposeSelect">
-    <option value="-12">-12 (Down Octave)</option>
-    <option value="-11">-11</option>
-    <option value="-10">-10</option>
-    <option value="-9">-9</option>
-    <option value="-8">-8</option>
-    <option value="-7">-7</option>
-    <option value="-6">-6</option>
-    <option value="-5">-5</option>
-    <option value="-4">-4</option>
-    <option value="-3">-3</option>
-    <option value="-2">-2</option>
-    <option value="-1">-1</option>
-    <option value="0" selected>0</option>
-    <option value="1">+1</option>
-    <option value="2">+2</option>
-    <option value="3">+3</option>
-    <option value="4">+4</option>
-    <option value="5">+5</option>
-    <option value="6">+6</option>
-    <option value="7">+7</option>
-    <option value="8">+8</option>
-    <option value="9">+9</option>
-    <option value="10">+10</option>
-    <option value="11">+11</option>
-    <option value="12">+12 (Up Octave)</option>
-  </select>
-  <br>
-  <br>
+  <div class="noprint">
+    <label for="showChords">Acorduri</label>
+    <input type="checkbox" id="showChords" checked>  
+    <br>
+    <label for="transposeSelect">Tonalitate: </label>
+    <select id="transposeSelect">
+      <option value="-12">-12 (Down Octave)</option>
+      <option value="-11">-11</option>
+      <option value="-10">-10</option>
+      <option value="-9">-9</option>
+      <option value="-8">-8</option>
+      <option value="-7">-7</option>
+      <option value="-6">-6</option>
+      <option value="-5">-5</option>
+      <option value="-4">-4</option>
+      <option value="-3">-3</option>
+      <option value="-2">-2</option>
+      <option value="-1">-1</option>
+      <option value="0" selected>0</option>
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="3">+3</option>
+      <option value="4">+4</option>
+      <option value="5">+5</option>
+      <option value="6">+6</option>
+      <option value="7">+7</option>
+      <option value="8">+8</option>
+      <option value="9">+9</option>
+      <option value="10">+10</option>
+      <option value="11">+11</option>
+      <option value="12">+12 (Up Octave)</option>
+    </select>
+    <br>
+    <br>
+  </div>
 
   <!-- 
   C,  C#,  D,  D#,  E,  F,  F#,  G,   G#,   A,  A#,  B
   Do, Do#, Re, Re#, Mi, Fa, Fa#, Sol, Sol#, La, La#, Si
   -->
 
-  <br>
   <span class="lyric" data-chord="G">Strofa</span>
   <br>
 
   <br>
-  <span class="lyric" data-chord="G">Refren</span>
-  <br>
+  <b>
+    <span class="lyric" data-chord="G">Refren</span>
+  </b>
 
   <span class="lyric">    
-  ...
+    <br>
+    ...
   </span>
   
   <script src="../scripts.js"></script>
   
-  <br>
-  <br>
-  <a href="../index.html">Home</a>
+  <div class="noprint">
+    <br>
+    <br>
+    <a href="../index.html">Home</a>
+  </div>
 </body>
 
 </html>

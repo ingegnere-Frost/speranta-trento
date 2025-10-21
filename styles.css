@@ -16,3 +16,10 @@
 .lyric.hide-chords::before {
     display: none;
 }
+@media print {
+            .noprint {
+                visibility: hidden;
+                height: 0;
+                overflow: hidden;
+            }
+        }
