@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speranța Trento</title>
     <style>
-        body { display: flex; font-family: Arial, sans-serif; }
+        body { display: flex; font-family: Arial, sans-serif; 
+            transform: scale(1.25);
+            transform-origin: 0 0;
+            width: 75%;
+        }
         .sidebar {
             position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
             background: #f0f0f0; padding: 10px; border-radius: 5px;
         }
         .sidebar a { display: block; margin: 5px 0; text-decoration: none; color: #007acc; }
-        .content { margin: 20px; padding-left: 80px; flex: 1; }
+        .content { margin: 20px; padding-left: 65px; flex: 1; }
         h2 { scroll-margin-top: 60px; }
     </style>
 </head>
@@ -59,6 +63,9 @@
             sidebar.innerHTML = letters.join('');
         });
     </script>
+
+    <br>
+    <a href="version-updates.html">Version history</a>
 </body>
 
 </html>

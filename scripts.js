@@ -22,10 +22,10 @@ function transposeChord(chord, semitones) {
 
 document.getElementById("transposeSelect").addEventListener("change", function () {
     const shift = parseInt(this.value);
-    document.querySelectorAll("[data-chord]").forEach(el => {
-    const originalChord = el.getAttribute("data-original") || el.getAttribute("data-chord");
+    document.querySelectorAll("[chord]").forEach(el => {
+    const originalChord = el.getAttribute("data-original") || el.getAttribute("chord");
     const transposedChord = transposeChord(originalChord, shift);
-    el.setAttribute("data-chord", transposedChord);
+    el.setAttribute("chord", transposedChord);
     el.setAttribute("data-original", originalChord);
     });
 });

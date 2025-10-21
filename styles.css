@@ -1,3 +1,9 @@
+body {
+    transform: scale(1.5); /* Increases size by 50% */
+    transform-origin: 0 0; /* Keeps content top-left */
+    width: 50%; /* Adjusts width to prevent horizontal scroll */
+}
+
 .verse {
     line-height: 2;
 }
@@ -7,17 +13,17 @@
     grid-template-rows: auto auto;
     line-height: 1;
 }
-.lyric[data-chord] {
-    --chord: attr(data-chord);
+.lyric[chord] {
+    --chord: attr(chord);
 }
 .lyric:before {
     content: var(--chord, '\00a0');
     /*justify-self: start; /* Default alignment: left */
 }
-.lyric[data-chord-align="right"]:before {
+.lyric[chord-align="right"]:before {
     justify-self: end;
 }
-.lyric[data-chord-align="center"]:before {
+.lyric[chord-align="center"]:before {
     justify-self: center;
 }
 .lyric.hide-chords::before {
