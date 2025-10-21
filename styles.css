@@ -12,14 +12,21 @@
 }
 .lyric:before {
     content: var(--chord, '\00a0');
+    /*justify-self: start; /* Default alignment: left */
+}
+.lyric[data-chord-align="right"]:before {
+    justify-self: end;
+}
+.lyric[data-chord-align="center"]:before {
+    justify-self: center;
 }
 .lyric.hide-chords::before {
     display: none;
 }
+
+@media screen {
+    .noScreen{display:none;}
+}
 @media print {
-            .noprint {
-                visibility: hidden;
-                height: 0;
-                overflow: hidden;
-            }
+    .noPrint{display:none;}
 }
