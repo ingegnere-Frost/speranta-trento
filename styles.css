@@ -1,7 +1,7 @@
 body {
-    transform: scale(1.35); /* Increases size by 35% */
+    transform: scale(1.3); /* Increases size by 35% */
     transform-origin: 0 0; /* Keeps content top-left */
-    width: 50%; /* Adjusts width to prevent horizontal scroll */
+    width: 70%; /* Adjusts width to prevent horizontal scroll */
 }
 
 .verse {
