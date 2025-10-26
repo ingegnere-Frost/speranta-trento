@@ -1,4 +1,5 @@
 body {
+    font-family: Arial, sans-serif;
     transform: scale(1.25); /* Increases size by 35% */
     transform-origin: 0 0; /* Keeps content top-left */
     width: 75%; /* Adjusts width to prevent horizontal scroll */
@@ -18,6 +19,7 @@ body {
 }
 .lyric:before {
     content: var(--chord, '\00a0');
+    color:blue;
     /*justify-self: start; /* Default alignment: left */
 }
 .lyric[chord-align="right"]:before {
