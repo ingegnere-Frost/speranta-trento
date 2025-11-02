@@ -12,7 +12,7 @@
   <link rel="manifest" href="/favicons/site.webmanifest" />
   <style>
     @media print {
-      body { zoom: 120%; } /* It changes for each song */
+      body { zoom: 140%; } /* It changes for each song */
     }
   </style>
 </head>
@@ -75,6 +75,32 @@
   </div>
   
   <script src="../scripts.js"></script>
+  <!-- If song is too long, adapt nicely based on the chords checkbox
+  <script>
+    const showChordsCheckbox = document.getElementById("showChords");
+    let zoomLevel = 165; // Initialize with default zoom
+
+    showChordsCheckbox.addEventListener("change", function() {
+      zoomLevel = this.checked ? 165 : 210; // Update zoomLevel accordingly (remember also the initialized value!!)
+      updatePrintZoom(zoomLevel);
+    });
+
+    function updatePrintZoom(zoom) {
+      // Create and append print style
+      const style = document.createElement('style');
+      style.type = 'text/css';
+      style.innerHTML = `
+        @media print {
+          body { zoom: ${zoom}%; }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    // Initialize with default zoom
+    updatePrintZoom(zoomLevel);
+  </script>
+  -->
   
   <div class="noPrint">
     <br>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <title>Tatăl nostru cel ceresc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+</head>
+<body>
+  <div class="noPrint">
+    <label for="showChords">Acorduri</label>
+    <input type="checkbox" id="showChords" checked>  
+    <br>
+    <label for="transposeSelect">Tonalitate: </label>
+    <select id="transposeSelect">
+      <option value="-9">Do</option>
+      <option value="-8">Do#</option>
+      <option value="-7">Re</option>
+      <option value="-6">Re#</option>
+      <option value="-5">Mi</option>
+      <option value="-4">Fa</option>
+      <option value="-3">Fa#</option>
+      <option value="-2">Sol</option>
+      <option value="-1">Sol#</option>
+      <option value="0" selected>La</option>
+      <option value="1">La#</option>
+      <option value="2">Si</option>
+    </select>
+    <br>
+    <br>
+  </div>
+
+  <div class="noScreen" style="color:red;"><h3>Tatăl nostru cel ceresc</h3></div>
+
+  <span class="lyric">1)</span>
+  <span class="lyric">T</span><span class="lyric" chord="a">atăl</span>
+  <span class="lyric">nostru</span>
+  <span class="lyric" chord="C" chord-align="center">cel</span>
+  <span class="lyric">ceresc</span> <br>
+  <span class="lyric" chord="a" chord-align="right">Ce</span>
+  <span class="lyric">în</span>
+  <span class="lyric">slavă-mp</span><span class="lyric" chord="C">ărătești,</span> <br>
+  <span class="lyric">T</span><span class="lyric" chord="d">atăl</span>
+  <span class="lyric">nostru,</span>
+  <span class="lyric">Du</span><span class="lyric" chord="a">mnezeu,</span> <br>
+  <span class="lyric" chord="d" chord-align="center">Azi</span>
+  <span class="lyric">la tine</span>
+  <span class="lyric" chord="a" chord-align="center">vin</span>
+  <span class="lyric" chord="a">și eu</span> <br>
+  <span class="lyric">S</span><span class="lyric" chord="E">fânt</span>
+  <span class="lyric" >e numere</span>
+  <span class="lyric" chord="a" chord-align="center">Tău!</span>
+  <br>
+
+  <br>
+  <b>
+    <span class="lyric">R1:</span>
+    <span class="lyric" chord="C" chord-align="center">Vie</span><span class="lyric" chord="d" chord-align="right">-mpărăția</span>
+    <span class="lyric">Ta</span> <br>
+    <span class="lyric" chord="G" chord-align="center">Astăzi</span>
+    <span class="lyric">în</span>
+    <span class="lyric" chord="C" chord-align="center">inima</span>
+    <span class="lyric" chord="a" chord-align="center">mea,</span> <br>
+    <span class="lyric" chord="C" chord-align="center">Facă-</span><span class="lyric">se</span>
+    <span class="lyric" chord="d" chord-align="center">doar voia Ta</span> <br>
+    <span class="lyric">În</span>
+    <span class="lyric" chord="G">toată</span>
+    <span class="lyric" chord="E" chord-align="center">viața</span>
+    <span class="lyric" chord="a" chord-align="center">mea!</span> <br>
+    <span class="lyric" chord="E" chord-align="center">Sfânt</span>
+    <span class="lyric">e numele</span>
+    <span class="lyric" chord="a" chord-align="center">Tău!</span>
+  </b>
+
+  <div>
+    <br> 
+    2. Pâinea noastră să ne-o dai <br> 
+    Astăzi să putem trăi, <br> 
+    Iar pentru eternul Rai <br> 
+    Pâinea vieţii ne-o hrăni! <br> 
+    Sfânt e numele Tău! <br> 
+    <br> <b>
+    R2: Iartă-mi Tu păcatul greu, <br> 
+    Iartă Tu greşeală mea <br> 
+    Tot aşa cum iert şi eu, <br> 
+    Tot aşa cum voi ierta. <br> 
+    Sfânt e numele Tău! <br> 
+    <br> </b>
+    3. Ţine-ne sub scutul Tău <br> 
+    Şi-n ispite nu ne du, <br> 
+    Ci ne scapă de cel rău <br> 
+    Şi ne-ajută, Doamne, Tu! <br> 
+    Sfânt e numele Tău! <br> 
+    <br> <b>
+    R3: Este-a Ta împărăţia, <br> 
+    Slava, cinstea şi puterea! <br> 
+    Laudă-n cer şi pe Pământ <br> 
+    Tată, Fiu şi Duh Preasfânt! <br> 
+    Sfânt e numele Tău! <br> 
+    </b>
+  </div>
+  
+  <script src="../scripts.js"></script>
+  <script>
+    const showChordsCheckbox = document.getElementById("showChords");
+    let zoomLevel = 165;
+
+    showChordsCheckbox.addEventListener("change", function() {
+      zoomLevel = this.checked ? 165 : 210;
+      updatePrintZoom(zoomLevel);
+    });
+
+    function updatePrintZoom(zoom) {
+      const style = document.createElement('style');
+      style.type = 'text/css';
+      style.innerHTML = `
+        @media print {
+          body { zoom: ${zoom}%; }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    updatePrintZoom(zoomLevel);
+  </script>
+  
+  <div class="noPrint">
+    <br>
+    <br>
+    <a href="../index.html">Home</a>
+  </div>
+</body>
+</html>

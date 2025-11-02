@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <title>Tu eşti floarea din grădină</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+</head>
+<body>
+  <div class="noPrint">
+    <label for="showChords">Acorduri</label>
+    <input type="checkbox" id="showChords" checked>  
+    <br>
+    <label for="transposeSelect">Tonalitate: </label>
+    <select id="transposeSelect">
+      <option value="-11">Do</option>
+      <option value="-10">Do#</option>
+      <option value="-9">Re</option>
+      <option value="-8">Re#</option>
+      <option value="-7">Mi</option>
+      <option value="-6">Fa</option>
+      <option value="-5">Fa#</option>
+      <option value="-4">Sol</option>
+      <option value="-3">Sol#</option>
+      <option value="-2">La</option>
+      <option value="-1">La#</option>
+      <option value="0" selected>Si</option>
+    </select>
+    <br>
+    <br>
+  </div>
+
+  <div class="noScreen" style="color:red;"><h3>Tu eşti floarea din grădină</h3></div>
+
+  <span class="lyric">1)</span>
+  <span class="lyric" chord="B">Tu ești floarea din grădină,</span> <br>
+  <span class="lyric" chord="c#">Tu ești crinul din lumină,</span> <br>
+  <span class="lyric" chord="eb">Tu ești fiul Tatălui de</span>
+  <span class="lyric" chord="B" chord-align="right">sus!</span> <br>
+  <span class="lyric" chord="B">Tu ești rodul suferinței</span> <br>
+  <span class="lyric" chord="c#">Din grădina umilinței</span> <br>
+  <span class="lyric" chord="eb">Nu pleca din brațul lui Isus</span>
+  <span class="lyric" chord="B" chord-align="right">Isus</span>
+  <br>
+
+  <br>
+  <b>
+    <span class="lyric">R1: </span>
+    <span class="lyric" chord="c#">Pe cărare e durere,</span> <br>
+    <span class="lyric" chord="B">Dar primești și mângâiere,</span> <br>
+    <span class="lyric" chord="F#">Ai răbdare și te roagă</span>
+    <span class="lyric" chord="B">lui</span>
+    <span class="lyric" chord="F#">Isu</span><span class="lyric" chord="B">s!</span> <br>
+    <span class="lyric" chord="c#">Pe cărare-i suferință,</span> <br>
+    <span class="lyric" chord="B">E dispreț și umilință,</span> <br>
+    <span class="lyric" chord="F#">Dar cărarea te va duce-n</span>
+    <span class="lyric" chord="B">cer</span><span class="lyric" chord="F#">uri</span>
+    <span class="lyric" chord="B" chord-align="center">sus!</span>
+  </b>
+
+  <div>
+    <br> 
+    2. Tu eşti floarea din grădină, <br>
+    Tu eşti crinul din lumină, <br>
+    Tu eşti fiul Tatălui de sus! <br>
+    Eşti spălat de orice vină <br>
+    Prin iubirea Lui deplină <br>
+    Nu pleca din braţul lui Isus! <br>
+    <br> <b>
+    R2: Nu va fi mereu tot soare <br>
+    Vor fi zile de-ncercare <br>
+    Ca să vezi ce bun şi mare e Isus! <br>
+    Ca să recunoşti în tine <br>
+    Că puterea Lui te ţine <br>
+    Şi din suflet să-I dai slavă lui Isus! <br>
+    </b> <br>
+    3. Tu eşti floarea din grădină, <br>
+    Tu eşti crinul din lumină, <br>
+    Tu eşti fiul Tatălui de sus! <br>
+    Nu acoperi lumina, <br>
+    Nu îl părăsi ca Dima, <br>
+    Nu pleca din braţul lui Isus! <br>
+    <br> <b>
+    R3: Căci necaz şi strâmtorare <br>
+    Vor veni peste popoare, <br>
+    Tu rămâi, rămâi în braţul lui Isus! <br>
+    N-o să afli-n lumea mare <br>
+    Pentru suflet vindecare, <br>
+    N-ai să-L poţi privi în faţă pe Isus! <br>
+    </b> <br>
+    4. Tu eşti floarea din grădină, <br>
+    Tu eşti crinul din lumină, <br>
+    Tu eşti fiul Tatălui de sus! <br>
+    Striga „Ava duhu-n tine, <br>
+    Îngeri luptă pentru tine, <br>
+    Nu pleca din braţul lui Isus! <br>
+    <br> <b>
+    R4: Chiar dacă furtuna-i mare <br>
+    Şi nu vezi nicio scăpare <br>
+    Ai nădejde şi te roagă lui Isus! <br>
+    Nu lăsa calea îngustă <br>
+    Şi nu renunţa la luptă <br>
+    Dacă vrei să-L vezi în faţă pe Isus <br>
+    </b>
+  </div>
+  
+  <script src="../scripts.js"></script>
+  <script>
+    const showChordsCheckbox = document.getElementById("showChords");
+    let zoomLevel = 140;
+
+    showChordsCheckbox.addEventListener("change", function() {
+      zoomLevel = this.checked ? 140 : 185;
+      updatePrintZoom(zoomLevel);
+    });
+
+    function updatePrintZoom(zoom) {
+      const style = document.createElement('style');
+      style.type = 'text/css';
+      style.innerHTML = `
+        @media print {
+          body { zoom: ${zoom}%; }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    updatePrintZoom(zoomLevel);
+  </script>
+  
+  <div class="noPrint">
+    <br>
+    <br>
+    <a href="../index.html">Home</a>
+  </div>
+</body>
+</html>
