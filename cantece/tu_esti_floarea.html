@@ -63,9 +63,9 @@
     <span class="lyric" chord="B" chord-align="center">sus!</span>
   </b>
 
-  <div>
+  <div class="verse">
     <br> 
-    2. Tu eşti floarea din grădină, <br>
+    2) Tu eşti floarea din grădină, <br>
     Tu eşti crinul din lumină, <br>
     Tu eşti fiul Tatălui de sus! <br>
     Eşti spălat de orice vină <br>
@@ -79,7 +79,7 @@
     Că puterea Lui te ţine <br>
     Şi din suflet să-I dai slavă lui Isus! <br>
     </b> <br>
-    3. Tu eşti floarea din grădină, <br>
+    3) Tu eşti floarea din grădină, <br>
     Tu eşti crinul din lumină, <br>
     Tu eşti fiul Tatălui de sus! <br>
     Nu acoperi lumina, <br>
@@ -93,7 +93,7 @@
     Pentru suflet vindecare, <br>
     N-ai să-L poţi privi în faţă pe Isus! <br>
     </b> <br>
-    4. Tu eşti floarea din grădină, <br>
+    4) Tu eşti floarea din grădină, <br>
     Tu eşti crinul din lumină, <br>
     Tu eşti fiul Tatălui de sus! <br>
     Striga „Ava duhu-n tine, <br>
@@ -110,28 +110,7 @@
   </div>
   
   <script src="../scripts.js"></script>
-  <script>
-    const showChordsCheckbox = document.getElementById("showChords");
-    let zoomLevel = 140;
-
-    showChordsCheckbox.addEventListener("change", function() {
-      zoomLevel = this.checked ? 140 : 185;
-      updatePrintZoom(zoomLevel);
-    });
-
-    function updatePrintZoom(zoom) {
-      const style = document.createElement('style');
-      style.type = 'text/css';
-      style.innerHTML = `
-        @media print {
-          body { zoom: ${zoom}%; }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-
-    updatePrintZoom(zoomLevel);
-  </script>
+  <script> setupChordZoom(120, 170); </script>
   
   <div class="noPrint">
     <br>

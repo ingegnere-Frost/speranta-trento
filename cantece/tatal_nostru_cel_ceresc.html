@@ -77,9 +77,9 @@
     <span class="lyric" chord="a" chord-align="center">Tău!</span>
   </b>
 
-  <div>
+  <div class="verse">
     <br> 
-    2. Pâinea noastră să ne-o dai <br> 
+    2) Pâinea noastră să ne-o dai <br> 
     Astăzi să putem trăi, <br> 
     Iar pentru eternul Rai <br> 
     Pâinea vieţii ne-o hrăni! <br> 
@@ -91,7 +91,7 @@
     Tot aşa cum voi ierta. <br> 
     Sfânt e numele Tău! <br> 
     <br> </b>
-    3. Ţine-ne sub scutul Tău <br> 
+    3) Ţine-ne sub scutul Tău <br> 
     Şi-n ispite nu ne du, <br> 
     Ci ne scapă de cel rău <br> 
     Şi ne-ajută, Doamne, Tu! <br> 
@@ -106,28 +106,7 @@
   </div>
   
   <script src="../scripts.js"></script>
-  <script>
-    const showChordsCheckbox = document.getElementById("showChords");
-    let zoomLevel = 165;
-
-    showChordsCheckbox.addEventListener("change", function() {
-      zoomLevel = this.checked ? 165 : 210;
-      updatePrintZoom(zoomLevel);
-    });
-
-    function updatePrintZoom(zoom) {
-      const style = document.createElement('style');
-      style.type = 'text/css';
-      style.innerHTML = `
-        @media print {
-          body { zoom: ${zoom}%; }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-
-    updatePrintZoom(zoomLevel);
-  </script>
+  <script> setupChordZoom(140, 190); </script>
   
   <div class="noPrint">
     <br>

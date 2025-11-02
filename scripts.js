@@ -35,3 +35,25 @@ document.getElementById("showChords").addEventListener("change", function () {
     el.classList.toggle("hide-chords", !this.checked);
     });
 });
+
+function setupChordZoom(checkedZoom, uncheckedZoom) {
+    const showChordsCheckbox = document.getElementById("showChords");
+    let zoomLevel = checkedZoom;
+
+    showChordsCheckbox.addEventListener("change", function() {
+        zoomLevel = this.checked ? checkedZoom : uncheckedZoom;
+        updatePrintZoom(zoomLevel);
+    });
+
+    function updatePrintZoom(zoom) {
+    const style = document.createElement('style');
+    style.textContent = `
+        @media print {
+            body { zoom: ${zoom}%; }
+        }
+    `;
+    document.head.appendChild(style);
+    }
+
+    updatePrintZoom(zoomLevel);
+}
