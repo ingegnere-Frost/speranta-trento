@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     transform-origin: 0 0; /* Keeps content top-left */
-    transform: scale(1.15);
-    width: 80%; /* Adjusts width to prevent horizontal scroll */
+    transform: scale(1.05);
+    width: 90%; /* Adjusts width to prevent horizontal scroll */
 }
 
 .verse {
@@ -41,4 +41,5 @@ body {
         transform: none; /* Disable scaling when printing */
         width: 100%;
     }
+
 }
