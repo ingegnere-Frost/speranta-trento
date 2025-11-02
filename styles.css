@@ -29,6 +29,9 @@ body {
 .lyric.hide-chords::before {
     display: none;
 }
+.no-wrap {
+    white-space: nowrap;
+}
 
 @media screen {
     .noScreen{display:none;}
@@ -39,6 +42,4 @@ body {
         transform: none; /* Disable scaling when printing */
         width: 100%;
     }
-
 }
-
