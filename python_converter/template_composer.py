@@ -102,8 +102,9 @@ octave = [
       <option value="0" selected>Si</option>''']
 ]
 
-def beginning(title, tone):
-  print(f'''<!DOCTYPE html>
+def beginning(output, title, tone):
+  with open(output, 'a') as html:
+    html.write(f'''<!DOCTYPE html>
 <html lang="ro">
 <head>
   <title>{title}</title>
@@ -126,15 +127,16 @@ def beginning(title, tone):
     <label for="transposeSelect">Tonalitate: </label>
     <select id="transposeSelect">''')
   
-  print(octave[tonalitate[tone]][0])
+    html.write(octave[tonalitate[tone]][0])
   
-  print(f'''    </select>
+    html.write(f'''    </select>
     <br>
     <br>
   </div>\n''')
 
-def ending():
-  print(f'''  <script src="../scripts.js"></script>
+def ending(output):
+  with open(output, 'a') as html:
+    html.write(f'''  <script src="../scripts.js"></script>
   <script> setupChordZoom(100, 100); </script>
   
   <div class="noPrint">
@@ -143,4 +145,4 @@ def ending():
     <a href="../index.html">Home</a>
   </div>
 </body>
-</html>''', end='')
+</html>''')
