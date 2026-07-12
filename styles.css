@@ -30,6 +30,13 @@ body {
     display: none;
 }
 
+.transpose-container {
+  display: inline-block; /* o semplicemente block */
+}
+#showChords:not(:checked) ~ .transpose-container {
+  display: none;
+}
+
 @media screen {
     .noScreen{display:none;}
 }

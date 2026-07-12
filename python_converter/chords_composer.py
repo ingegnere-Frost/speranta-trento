@@ -29,7 +29,11 @@ def convert2acorduri(filename, output):
     ended = False
     bold = False
     with open(output, 'a') as html:
-        html.write(f'  {start}')
+        i = 0
+        if text[i] == '&':
+            html.write(f'  <b> {start}')
+            bold = True
+            i = i+1
         while i < len(text):
             if text[i] == '^':
                 j = i
@@ -89,4 +93,4 @@ def convert2acorduri(filename, output):
             else:
                 html.write(text[i])
             i = i+1
-        html.write(' <br>\n  </div>')
+        html.write(' <br>\n  </div>\n')

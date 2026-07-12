@@ -24,6 +24,7 @@ Almost all the stuff comes from <u>Resurse Creștine</u>. I'm not trying to crea
 This is a static website, so there isn't much code at all. The heavy part comes from importing all the songs: I have to manually search for them (making sure that they have the accents and everything), correct the syntax, seach for a version with the chords (acorduri), add them, and then I'm done. 
 
 I know that for some experts looking at the code, it might not seem very good, but I've tried my best; I'm not very proficient with **HTML**, and not proficient at all with **JavaScript**. I say this with a heavy heart, and I'm not really happy about it, but a good part of the code was generated with LLMs. Now, the idea and the execution was all from me, but since I don't know how to use the two aformentioned coding languages, that was my "best" course of action. But, the **Python** converter that I built, is all 100% me (*it ain't much, but it's honest work!*). Originally, it took me like half an hour for a single song, but then I said *"Why do I have to manually write every single line of code? Let me try with a Python script..."* and then, in like half a day, I made a script that does all the main stuff.
+The script corrects the accents on "Ș/ș" and "Ț/ț" characters, which can contain the wrong type of accent (with Cedilla, that looks very similar). Then, it adds the chords, and the bold sections, according to the input text file.
 
 
 ### Python Converter

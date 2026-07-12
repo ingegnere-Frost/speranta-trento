@@ -11,95 +11,95 @@ tonalitate = {'C':0,
               'A#':10,
               'B':11}
 octave = [
-  ['''      <option value="0" selected>Do</option>
-      <option value="1">Do#</option>
-      <option value="2">Re</option>
-      <option value="3">Re#</option>
-      <option value="4">Mi</option>
-      <option value="5">Fa</option>
-      <option value="6">Fa#</option>
-      <option value="7">Sol</option>
-      <option value="8">Sol#</option>
-      <option value="9">La</option>
-      <option value="10">La#</option>
-      <option value="11">Si</option>'''],
+  ['''        <option value="0" selected>Do</option>
+        <option value="1">Do#</option>
+        <option value="2">Re</option>
+        <option value="3">Re#</option>
+        <option value="4">Mi</option>
+        <option value="5">Fa</option>
+        <option value="6">Fa#</option>
+        <option value="7">Sol</option>
+        <option value="8">Sol#</option>
+        <option value="9">La</option>
+        <option value="10">La#</option>
+        <option value="11">Si</option>'''],
   [],
-  ['''      <option value="-2">Do</option>
-      <option value="-1">Do#</option>
-      <option value="0" selected>Re</option>
-      <option value="1">Re#</option>
-      <option value="2">Mi</option>
-      <option value="3">Fa</option>
-      <option value="4">Fa#</option>
-      <option value="5">Sol</option>
-      <option value="6">Sol#</option>
-      <option value="7">La</option>
-      <option value="8">La#</option>
-      <option value="9">Si</option>'''],
+  ['''        <option value="-2">Do</option>
+        <option value="-1">Do#</option>
+        <option value="0" selected>Re</option>
+        <option value="1">Re#</option>
+        <option value="2">Mi</option>
+        <option value="3">Fa</option>
+        <option value="4">Fa#</option>
+        <option value="5">Sol</option>
+        <option value="6">Sol#</option>
+        <option value="7">La</option>
+        <option value="8">La#</option>
+        <option value="9">Si</option>'''],
   [],
-  ['''      <option value="-4">Do</option>
-      <option value="-3">Do#</option>
-      <option value="-2">Re</option>
-      <option value="-1">Re#</option>
-      <option value="0" selected>Mi</option>
-      <option value="1">Fa</option>
-      <option value="2">Fa#</option>
-      <option value="3">Sol</option>
-      <option value="4">Sol#</option>
-      <option value="5">La</option>
-      <option value="6">La#</option>
-      <option value="7">Si</option>'''],
-  ['''      <option value="-5">Do</option>
-      <option value="-4">Do#</option>
-      <option value="-3">Re</option>
-      <option value="-2">Re#</option>
-      <option value="-1">Mi</option>
-      <option value="0" selected>Fa</option>
-      <option value="1">Fa#</option>
-      <option value="2">Sol</option>
-      <option value="3">Sol#</option>
-      <option value="4">La</option>
-      <option value="5">La#</option>
-      <option value="6">Si</option>'''],
+  ['''        <option value="-4">Do</option>
+        <option value="-3">Do#</option>
+        <option value="-2">Re</option>
+        <option value="-1">Re#</option>
+        <option value="0" selected>Mi</option>
+        <option value="1">Fa</option>
+        <option value="2">Fa#</option>
+        <option value="3">Sol</option>
+        <option value="4">Sol#</option>
+        <option value="5">La</option>
+        <option value="6">La#</option>
+        <option value="7">Si</option>'''],
+  ['''        <option value="-5">Do</option>
+        <option value="-4">Do#</option>
+        <option value="-3">Re</option>
+        <option value="-2">Re#</option>
+        <option value="-1">Mi</option>
+        <option value="0" selected>Fa</option>
+        <option value="1">Fa#</option>
+        <option value="2">Sol</option>
+        <option value="3">Sol#</option>
+        <option value="4">La</option>
+        <option value="5">La#</option>
+        <option value="6">Si</option>'''],
   [],
-  ['''      <option value="-7">Do</option>
-      <option value="-6">Do#</option>
-      <option value="-5">Re</option>
-      <option value="-4">Re#</option>
-      <option value="-3">Mi</option>
-      <option value="-2">Fa</option>
-      <option value="-1">Fa#</option>
-      <option value="0" selected>Sol</option>
-      <option value="1">Sol#</option>
-      <option value="2">La</option>
-      <option value="3">La#</option>
-      <option value="4">Si</option>'''],
+  ['''        <option value="-7">Do</option>
+        <option value="-6">Do#</option>
+        <option value="-5">Re</option>
+        <option value="-4">Re#</option>
+        <option value="-3">Mi</option>
+        <option value="-2">Fa</option>
+        <option value="-1">Fa#</option>
+        <option value="0" selected>Sol</option>
+        <option value="1">Sol#</option>
+        <option value="2">La</option>
+        <option value="3">La#</option>
+        <option value="4">Si</option>'''],
   [],
-  ['''      <option value="-9">Do</option>
-      <option value="-8">Do#</option>
-      <option value="-7">Re</option>
-      <option value="-6">Re#</option>
-      <option value="-5">Mi</option>
-      <option value="-4">Fa</option>
-      <option value="-3">Fa#</option>
-      <option value="-2">Sol</option>
-      <option value="-1">Sol#</option>
-      <option value="0" selected>La</option>
-      <option value="1">La#</option>
-      <option value="2">Si</option>'''],
+  ['''        <option value="-9">Do</option>
+        <option value="-8">Do#</option>
+        <option value="-7">Re</option>
+        <option value="-6">Re#</option>
+        <option value="-5">Mi</option>
+        <option value="-4">Fa</option>
+        <option value="-3">Fa#</option>
+        <option value="-2">Sol</option>
+        <option value="-1">Sol#</option>
+        <option value="0" selected>La</option>
+        <option value="1">La#</option>
+        <option value="2">Si</option>'''],
   [],
-  ['''      <option value="-11">Do</option>
-      <option value="-10">Do#</option>
-      <option value="-9">Re</option>
-      <option value="-8">Re#</option>
-      <option value="-7">Mi</option>
-      <option value="-6">Fa</option>
-      <option value="-5">Fa#</option>
-      <option value="-4">Sol</option>
-      <option value="-3">Sol#</option>
-      <option value="-2">La</option>
-      <option value="-1">La#</option>
-      <option value="0" selected>Si</option>''']
+  ['''        <option value="-11">Do</option>
+        <option value="-10">Do#</option>
+        <option value="-9">Re</option>
+        <option value="-8">Re#</option>
+        <option value="-7">Mi</option>
+        <option value="-6">Fa</option>
+        <option value="-5">Fa#</option>
+        <option value="-4">Sol</option>
+        <option value="-3">Sol#</option>
+        <option value="-2">La</option>
+        <option value="-1">La#</option>
+        <option value="0" selected>Si</option>''']
 ]
 
 def beginning(output, title, tone):
@@ -124,19 +124,21 @@ def beginning(output, title, tone):
     <label for="showChords">Acorduri</label>
     <input type="checkbox" id="showChords" checked>  
     <br>
-    <label for="transposeSelect">Tonalitate: </label>
-    <select id="transposeSelect">''')
+    <span class="transpose-container">
+      <label for="transposeSelect">Tonalitate: </label>
+      <select id="transposeSelect">\n''')
   
     html.write(octave[tonalitate[tone]][0])
   
-    html.write(f'''    </select>
+    html.write(f'''\n      </select>
+    </span>
     <br>
     <br>
-  </div>\n''')
+  </div>\n\n''')
 
 def ending(output):
   with open(output, 'a') as html:
-    html.write(f'''  <script src="../scripts.js"></script>
+    html.write(f'''\n  <script src="../scripts.js"></script>
   <script> setupChordZoom(100, 100); </script>
   
   <div class="noPrint">

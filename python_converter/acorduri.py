@@ -2,13 +2,12 @@
 python3 acorduri.py > output.html
 '''
 
-import json
 import template_composer as temp
 import chords_composer as chor
 
-filename = 'example.txt'
-titlu = 'Poporașul Meu, Trezește-te'
-ton = 'E'
+filename = 'test.txt'
+titlu = 'Izvorul, izvorul, Izvor de bucurii - De când urmez pe Isus'
+ton = 'G'
 
 output = "../cantece/" + filename[:-3] + "html"
 
@@ -20,4 +19,4 @@ chor.convert2acorduri(filename, output)
 temp.ending(output)
 
 # manually paste the printed line in the '_data.json' file
-print(f'{{"title": "{titlu}", "link": "../cantece/{output}"}}')
+print(f'{{"title": "{titlu}", "link": "{output}"}}')
